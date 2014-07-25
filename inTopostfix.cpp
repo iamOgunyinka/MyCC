@@ -3,6 +3,8 @@
 #include <stdexcept>
 #include <stack>
 
+//You can find the grammar here -> http://pastebin.com/7eCaktLx
+
 //as much as I hate having globals, here have it!
 std::string printer { };
 
