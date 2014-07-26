@@ -57,7 +57,7 @@ namespace Compiler
             
         }
         friend std::ostream &operator<<(std::ostream &os, const Token &tk ){
-            return os << "Position -> " << tk.position.line << ":" << tk.position.column << " "
+            return os << "Position -> Line: " << tk.position.line << " column :" << tk.position.column << " "
                 << "Symbol -> " << tk.sym.lexeme << " : " << (int) tk.sym.type << " "
                 << "Type: " << (int)tk.type;
         }
@@ -83,6 +83,7 @@ namespace Compiler
     //private methods
     private:
         void updatePos( char ch );
+        int peek( ) const;
         inline void getNextChar( );
         void singleLineCommentHandler();
         void doubleLineCommentHandler();
@@ -92,7 +93,7 @@ namespace Compiler
         std::ifstream &stream;
         int currChar;
         static std::map< std::string, Symbol > keywordTable;
-        Pos position;
+        Pos position, old_position;
     };
     
 }

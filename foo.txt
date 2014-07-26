@@ -4,9 +4,9 @@
     Milkshake especially, Oh! How much I love that*/
     
     int main()
-    //{
+    {
         double x = 100;
-        faraday = 12;
+        faraday = 12.11;
     }
     if( x == 15 ){
         x = 12 * 80/11+15-56;
